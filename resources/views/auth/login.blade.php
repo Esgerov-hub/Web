@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stoody | Log in</title>
+    <title>WebLabs | Log in</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -34,7 +34,7 @@
                     </div>
                 @endif
     <div class="login-logo">
-        <a href="{{ route('dashboard.index') }}"><b>Stoody</b></a>
+        <a href="{{ route('dashboard.index') }}"><b>WebLabs</b></a>
     </div>
     <!-- /.login-logo -->
     <div class="card">

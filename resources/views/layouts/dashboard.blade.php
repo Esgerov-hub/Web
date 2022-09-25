@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Weblabs.az">
     <meta name="generator" content="Weblabs.az">
-    <title>Stoody | @yield("title")</title>
+    <title>WebLabs | @yield("title")</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -126,7 +126,7 @@
         <a href="{{ route('dashboard.index') }}" class="brand-link">
             <img src="{{ asset('dashboard/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
                  class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">Stoody Dashboard</span>
+            <span class="brand-text font-weight-light">WebLabs Dashboard</span>
         </a>
 
         <!-- Sidebar -->

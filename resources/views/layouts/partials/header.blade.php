@@ -103,7 +103,7 @@
                     <div class="col-auto">
                         <nav class="main-menu menu-style3 d-none d-lg-block">
                             <ul>
-                                <li ><a href="{{ route('weblabs.index') }}">Home</a></li>
+                                <li ><a href="{{ route('weblabs.index') }}" >Home</a></li>
                                 <li><a href="{{ route('weblabs.about') }}">About Us</a></li>
                                 <li ><a href="{{ route('weblabs.service') }}">Service</a></li>
                                 <li ><a href="{{ route('weblabs.project') }}">Project</a>

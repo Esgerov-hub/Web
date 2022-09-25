@@ -74,8 +74,7 @@
     </div>
     <div class="copyright-wrap">
         <div class="container"><p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2022 <a
-                    class="text-white" href="index.html">TechBiz</a>. All rights reserved by <a class="text-white"
-                                                                                                href="https://themeforest.net/user/vecuro_themes">Vecuro</a>.
+                    class="text-white" href="{{ route('weblabs.index') }}">WebLabs</a>. All rights reserved by
             </p></div>
     </div>
 </footer>
