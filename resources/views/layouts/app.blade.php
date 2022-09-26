@@ -7,8 +7,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Weblabs - @yield('weblabs.title')</title>
     <meta name="author" content="vecuro">
-    <meta name="description" content="TechBiz - IT Solution & Service HTML Template">
-    <meta name="keywords" content="TechBiz - IT Solution & Service HTML Template">
+    <meta name="description" content="WebLabs">
+    <meta name="keywords" content="WebLabs">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('weblabs/assets/img/favicons/apple-icon-57x57.png') }}">

@@ -1,7 +1,7 @@
 <?php
 
 
-return 
+return
 [
     'home' => 'Home',
     'about' => 'About Us',
@@ -10,6 +10,6 @@ return
     'blog' => 'Blogs',
     'contact' => 'Contact Us',
     'team' => 'Team',
-    'student' => 'Student'
-    
+    'student' => 'Student',
+    'project' => 'Project'
 ];

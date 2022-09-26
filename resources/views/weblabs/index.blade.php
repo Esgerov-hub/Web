@@ -23,20 +23,16 @@
                     <div
                         style="-webkit-text-stroke: 1px rgba(255,255,255,0.10); font-size:300px; text-align:center; font-style:normal; text-decoration:none; text-transform:uppercase; font-weight:600; letter-spacing:0px; border-style:solid; border-color:#000; background-position:0% 0%; background-repeat:no-repeat; font-family:Exo; width:1700px; left:50%; top:290px; color:rgba(255, 255, 255, 0.05);"
                         class="ls-l ls-text-layer"
-                        data-ls="durationin:1500; delayin:1000; parallax:true; parallaxlevel:8; parallaxaxis:x;">Solution
+                        data-ls="durationin:1500; delayin:1000; parallax:true; parallaxlevel:8; parallaxaxis:x;">WEBLABS
                     </div>
-                    <p style="font-size:20px; text-align:center; font-style:normal; text-decoration:none; text-transform:none; font-weight:600; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Exo; color:#ffffff; top:315px; left:50%; width:1000px;"
-                       class="ls-l ls-hide-tablet ls-hide-phone ls-text-layer"
-                       data-ls="offsetxin:300; durationin:1500; delayin:400; easingin:easeOutQuint; offsetxout:300; durationout:1500; easingout:easeOutQuint;">
-                        SUCCESS YOUR BUSINESS</p>
+{{--                    <p style="font-size:20px; text-align:center; font-style:normal; text-decoration:none; text-transform:none; font-weight:600; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Exo; color:#ffffff; top:315px; left:50%; width:1000px;"--}}
+{{--                       class="ls-l ls-hide-tablet ls-hide-phone ls-text-layer"--}}
+{{--                       data-ls="offsetxin:300; durationin:1500; delayin:400; easingin:easeOutQuint; offsetxout:300; durationout:1500; easingout:easeOutQuint;">--}}
+{{--                        {{ $slider->name[app()->getLocale().'_name'] }}</p>--}}
                     <h1 style="top:370px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:72px; color:#ffffff; font-family:Exo; width:1000px;"
                         class="ls-l ls-hide-tablet ls-hide-phone ls-text-layer"
                         data-ls="offsetxin:-200; durationin:1500; easingin:easeOutQuint; offsetxout:-100; durationout:1500; easingout:easeOutQuint; position:relative;">
-                        Excellent IT services for</h1>
-                    <h1 style="top:455px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:72px; font-family:Exo; color:#ffffff; text-transform:none; background-color:transparent; background-repeat:no-repeat; cursor:auto; width:1000px;"
-                        class="ls-l ls-hide-tablet ls-hide-phone ls-text-layer"
-                        data-ls="offsetxin:-200; durationin:1500; delayin:200; easingin:easeOutQuint; offsetxout:-100; durationout:1500; easingout:easeOutQuint;">
-                        your success</h1>
+                        {{ $slider->name[app()->getLocale().'_name'] }}</h1>
                     <div
                         style="top:595px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:24px; width:1000px;"
                         class="ls-l ls-hide-tablet ls-hide-phone ls-html-layer"
@@ -45,18 +41,14 @@
                                                                             class="vs-btn ls-hero-btn">ABOUT
                                 US<i class="far fa-arrow-right"></i></a></div>
                     </div>
-                    <p style="text-align:center; font-style:normal; text-decoration:none; text-transform:none; font-weight:600; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Exo; color:#ffffff; top:310px; left:50%; width:1000px; font-size:40px;"
-                       class="ls-l ls-hide-desktop ls-hide-phone ls-text-layer"
-                       data-ls="offsetxin:300; durationin:1500; delayin:400; easingin:easeOutQuint; offsetxout:300; durationout:1500; easingout:easeOutQuint;">
-                        SUCCESS YOUR BUSINESS</p>
+{{--                    <p style="text-align:center; font-style:normal; text-decoration:none; text-transform:none; font-weight:600; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Exo; color:#ffffff; top:310px; left:50%; width:1000px; font-size:40px;"--}}
+{{--                       class="ls-l ls-hide-desktop ls-hide-phone ls-text-layer"--}}
+{{--                       data-ls="offsetxin:300; durationin:1500; delayin:400; easingin:easeOutQuint; offsetxout:300; durationout:1500; easingout:easeOutQuint;">--}}
+{{--                        {{ $slider->name[app()->getLocale().'_name'] }}</p>--}}
                     <h1 style="top:404px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:110px; color:#ffffff; font-family:Exo; width:1200px;"
                         class="ls-l ls-hide-desktop ls-hide-phone ls-text-layer"
                         data-ls="offsetxin:-200; durationin:1500; easingin:easeOutQuint; offsetxout:-100; durationout:1500; easingout:easeOutQuint; position:relative;">
-                        Excellent IT services for</h1>
-                    <h1 style="top:511px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:110px; font-family:Exo; color:#ffffff; text-transform:none; border-style:solid; border-color:#000; background-color:transparent; background-repeat:no-repeat; cursor:auto; width:1200px;"
-                        class="ls-l ls-hide-desktop ls-hide-phone ls-text-layer"
-                        data-ls="offsetxin:-200; durationin:1500; delayin:200; easingin:easeOutQuint; offsetxout:-100; durationout:1500; easingout:easeOutQuint;">
-                        your success</h1>
+                        {{ $slider->name[app()->getLocale().'_name'] }}</h1>
                     <div
                         style="top:713px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:24px; width:1000px; height:28px;"
                         class="ls-l ls-hide-desktop ls-hide-phone ls-html-layer"
@@ -74,11 +66,7 @@
                     <h1 style="top:132px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:140px; color:#ffffff; font-family:Exo; width:1800px;"
                         class="ls-l ls-hide-desktop ls-hide-tablet ls-text-layer"
                         data-ls="offsetxin:-200; durationin:1500; easingin:easeOutQuint; offsetxout:-100; durationout:1500; easingout:easeOutQuint; position:relative;">
-                        Excellent IT services for</h1>
-                    <h1 style="top:305px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:140px; font-family:Exo; color:#ffffff; text-transform:none; border-style:solid; border-color:#000; background-color:transparent; background-repeat:no-repeat; cursor:auto; width:1800px;"
-                        class="ls-l ls-hide-desktop ls-hide-tablet ls-text-layer"
-                        data-ls="offsetxin:-200; durationin:1500; delayin:200; easingin:easeOutQuint; offsetxout:-100; durationout:1500; easingout:easeOutQuint;">
-                        your success</h1>
+                        {{ $slider->name[app()->getLocale().'_name'] }}</h1>
                     <div
                         style="top:599px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:24px; width:1000px; height:28px;"
                         class="ls-l ls-hide-desktop ls-hide-tablet ls-html-layer"

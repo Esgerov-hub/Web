@@ -51,9 +51,9 @@
                             <div class="footer-social">
                                 <a href="{{ $settings->social_network['facebook_url'] }}"><i class="fab fa-facebook-f"></i></a>
                                 <a href="{{ $settings->social_network['instagram_url'] }}"><i class="fab fa-instagram"></i></a>
-                                <a href="{{ $settings->social_network['telegram_url_1'] }}"><i class="fab fa-telegram"></i></a>
-                                <a href="{{ $settings->social_network['whatsapp_1'] }}"><i class="fab fa-whatsapp"></i></a>
                                 <a href="{{ $settings->social_network['linkedin_url'] }}"><i class="fab fa-linkedin"></i></a>
+                                <a href="{{ $settings->social_network['whatsapp_1'] }}"><i class="fab fa-whatsapp"></i></a>
+                                <a href="{{ $settings->social_network['telegram_url_1'] }}"><i class="fab fa-telegram"></i></a>
                                 <a href="{{ $settings->social_network['youtube_url'] }}"><i class="fab fa-youtube"></i></a></div>
                         </div>
                     </div>

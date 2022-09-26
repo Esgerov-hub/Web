@@ -66,7 +66,7 @@
                                     </thead>
                                     <tbody>
                                     @foreach($contacts as $contact)
-                                        @if($contact->users != null)
+{{--                                        @if($contact->users != null)--}}
                                         <tr>
                                             <td>{{ $contact->id }}</td>
                                             <td>{{ $contact->namesurname }}</td>
@@ -87,7 +87,7 @@
 ])
                                             </td>
                                         </tr>
-                                        @endif
+{{--                                        @endif--}}
                                     @endforeach
                                     </tbody>
 

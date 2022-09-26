@@ -1,7 +1,7 @@
 <?php
 
 
-return 
+return
 [
     'home' => 'Ana Səhifə',
     'about' => 'Haqqımızda',
@@ -10,6 +10,7 @@ return
     'blog' => 'Xəbərlər',
     'contact' => 'Əlaqə',
     'team' => 'Komanda',
-    'student' => 'Tələbələr'
-    
+    'student' => 'Tələbələr',
+    'project' => 'Project'
+
 ];
