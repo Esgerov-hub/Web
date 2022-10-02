@@ -18,6 +18,17 @@
                 <li><a href="{{ route('weblabs.project') }}">Project</a></li>
                 <li><a href="{{ route('weblabs.teams') }}">Teams</a></li>
                 <li><a href="{{ route('weblabs.contact') }}">Contact Us</a></li>
+                <li class="menu-item-has-children"><a href="">{{ LaravelLocalization::getCurrentLocaleNative() }}</a>
+                    <ul class="sub-menu">
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            @if($properties['native'] != LaravelLocalization::getCurrentLocaleNative())
+                                <li><a hreflang="{{ $localeCode }}"
+                                       href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        {{ $properties['native'] }}</a></li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

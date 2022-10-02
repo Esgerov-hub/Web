@@ -20,17 +20,12 @@ class ViewComposer extends Controller
         'user_id' => Auth::user()->id
         ])->get();
 
-        $comments = Comments::where(
-        [
-        'created_at'=>Carbon::now()->format('Y-m-d'),
-        'user_id' => Auth::user()->id
-        ])->get();
 
-        
+
+
         return $view->with(
             [
                 'contacts'=> $contacts,
-                'comments' => $comments
             ]);
     }
 }

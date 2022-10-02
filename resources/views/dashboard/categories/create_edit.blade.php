@@ -125,16 +125,7 @@
                                                 </div>
                                             @endif
                                         </div>
-                                        <div class="col-sm-6">
-                                            @if(isset($category) && $category != null)
-                                                <div class="avatar-lg">
-                                                    <div class="avatar-title bg-light rounded">
-                                                        <img src="{{ isset($category) && $category != null && isset($category->icon) ? $category->icon : asset('assets/images/favicon.ico') }}"
-                                                             id="img-preview" class="avatar-md h-auto" height="200" width="200">
-                                                    </div>
-                                                </div>
-                                            @endif
-                                    </div>
+
                                     </div>
                                         <div class="row">
                                             <div class="col-sm-6">
@@ -145,68 +136,15 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Icon</label>
-                                                        <div class="controls">
-                                                            <input type="file" class="form-control" name="icon">
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                         </div>
 
                                         <br>
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <label class="form-label"> Üst Kateqoriya</label>
-                                                    <div class="controls">
-                                                        <select name="top_id" id="" class="form-control">
-                                                            <option value="">Bir kateqoriya seçin</option>
-                                                            @foreach ($categories as $cat)
-                                                                <option value="{{ $cat->id }}" @if(isset($category)) @if($category->top_id == $cat->id) selected @endif @elseif(old('top_id') == $cat->id) selected @endif>
-                                                                    {{ $cat->name['az_name'] }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <label class="form-label"> Tip</label>
-                                                    <div class="controls">
-                                                        <select name="type" required class="form-control">
-                                                            <option value="0" @if(isset($category)) @if($category->type == 0) selected @endif @elseif(old('type') == 0) selected @endif>Bir tip seçin</option>
-                                                            <option value="1" @if(isset($category)) @if($category->type == 1) selected @endif @elseif(old('type') == 1) selected @endif>Servis</option>
-                                                            <option value="2" @if(isset($category)) @if($category->type == 2) selected @endif @elseif(old('type') == 2) selected @endif>Məqalə</option>
-                                                            <option value="3" @if(isset($category)) @if($category->type == 3) selected @endif @elseif(old('type') == 3) selected @endif>Məhsul</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <br>
 
 
                                     <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label class="form-label"> Order</label>
-                                                <div class="controls">
-                                                    <input type="text" class="form-control @error('order') is-invalid @enderror" name="order" value="@if(isset($category)) {{ $category->order }} @else {{ old('order') }} @endif" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label class="form-label"> Uid</label>
-                                                <div class="controls">
-                                                    <input type="text" class="form-control @error('uid') is-invalid @enderror"  name="uid" value="@if(isset($category)) {{ $category->uid }} @else {{ old('uid') }} @endif" >
-                                                </div>
-                                            </div>
-                                        </div>
+
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label class="form-label"> Active</label>
@@ -239,10 +177,6 @@
                                     </div>
 
                                     <br>
-                                    @include('layouts.seo.createseo', [
-                                        'langKey' => 'az',
-                                        'data' => isset($category) && isset($category->id) && $category != null  ? $category->seo : null,
-                                    ])
 
                                 </div>
                                 <div class="tab-pane fade" id="en" role="tabpanel"
@@ -258,10 +192,7 @@
                                                   style="width: 100%; height: 300px; font-size: 14px; line-height: 23px;padding:15px;">@if(isset($category)) {!! $category->description['en_description'] !!} @else {!! old('en_description') !!} @endif</textarea>
                                     </div>
                                     <br>
-                                    @include('layouts.seo.createseo', [
-                                        'langKey' => 'en',
-                                        'data' => isset($category) && isset($category->id) && $category != null  ? $category->seo : null,
-                                    ])
+
                                 </div>
                                 <div class="tab-pane fade" id="ru" role="tabpanel"
                                      aria-labelledby="custom-content-below-ru-tab">
@@ -276,10 +207,7 @@
                                                   style="width: 100%; height: 300px; font-size: 14px; line-height: 23px;padding:15px;">@if(isset($category)) {!! $category->description['ru_description'] !!} @else {!! old('ru_description') !!} @endif</textarea>
                                     </div>
                                     <br>
-                                    @include('layouts.seo.createseo', [
-                                        'langKey' => 'ru',
-                                        'data' => isset($category) && isset($category->id) && $category != null  ? $category->seo : null,
-                                    ])
+
                                 </div>
                             </div>
 

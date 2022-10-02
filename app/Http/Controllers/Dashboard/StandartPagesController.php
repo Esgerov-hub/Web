@@ -75,22 +75,6 @@ class StandartPagesController extends Controller
                 ];
 
 
-                $meta_title = [
-                    'az_meta_title' => $request->az_meta_title,
-                    'ru_meta_title' => $request->ru_meta_title,
-                    'en_meta_title' => $request->en_meta_title,
-                ];
-                $meta_description = [
-                    'az_meta_description' => $request->az_meta_description,
-                    'ru_meta_description' => $request->ru_meta_description,
-                    'en_meta_description' => $request->en_meta_description,
-                ];
-                $meta_keywords = [
-                    'az_meta_keywords' => $request->az_meta_keywords,
-                    'ru_meta_keywords' => $request->ru_meta_keywords,
-                    'en_meta_keywords' => $request->en_meta_keywords,
-                ];
-
 
             $imageurl = null;
             if ($request->hasFile('bg_image')) {
@@ -103,13 +87,6 @@ class StandartPagesController extends Controller
             $data->type = $request->type;
             $data->save();
 
-            $seo = new MetaSeo();
-            $seo->name = $meta_title;
-            $seo->description = $meta_description;
-            $seo->keyword = $meta_keywords;
-            $seo->type = "standart_pages";
-            $seo->element_id = $data->id;
-            $seo->save();
             return redirect()->back()->with('success', 'Məlumatınız əlavə edildi.');
 
         } catch (\Exception $e) {
@@ -187,31 +164,6 @@ class StandartPagesController extends Controller
             ]);
 
 
-            $meta_title = [
-                'az_meta_title' => $request->az_meta_title,
-                'ru_meta_title' => $request->ru_meta_title,
-                'en_meta_title' => $request->en_meta_title,
-            ];
-            
-            $meta_description = [
-                'az_meta_description' => $request->az_meta_description,
-                'ru_meta_description' => $request->ru_meta_description,
-                'en_meta_description' => $request->en_meta_description,
-            ];
-            $meta_keywords = [
-                'az_meta_keywords' => $request->az_meta_keywords,
-                'ru_meta_keywords' => $request->ru_meta_keywords,
-                'en_meta_keywords' => $request->en_meta_keywords,
-            ];
-            MetaSeo::where(['element_id' => $standartPage->id,'type' => 'standart_pages'])->update(
-                [
-                    'name' => $meta_title,
-                    'description' => $meta_description,
-                    'keyword' => $meta_keywords,
-                ]);
-
-
-
             return redirect()->back()->with('success', 'Məlumatınız düzəliş edildi');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', $e->getMessage());
@@ -250,7 +202,7 @@ class StandartPagesController extends Controller
     {
         try{
             $standartpages = StandartPages::orderBy('id','desc')->onlyTrashed()->get();
-           
+
             return view('dashboard.standartpages.recycle',compact('standartpages'));
 
         }catch(\Exception $exception){

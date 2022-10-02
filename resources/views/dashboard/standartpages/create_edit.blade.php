@@ -152,10 +152,7 @@
 
                                     <br>
 
-                                    @include('layouts.seo.createseo', [
-                                        'langKey' => 'az',
-                                        'data' => isset($standartPage) && isset($standartPage->id) && $standartPage != null  ? $standartPage->seo : null,
-                                    ])
+
 
                                 </div>
                                 <div class="tab-pane fade" id="en" role="tabpanel"
@@ -170,10 +167,7 @@
                                                   placeholder="Açıqlama daxil edin ..." name="en_description"
                                                   style="width: 100%; height: 300px; font-size: 14px; line-height: 23px;padding:15px;">@if(isset($standartPage)) {!! $standartPage->description['en_description'] !!} @else {!! old('en_description') !!} @endif</textarea>
                                     </div>
-                                    @include('layouts.seo.createseo', [
-                                        'langKey' => 'en',
-                                        'data' => isset($standartPage) && isset($standartPage->id) && $standartPage != null  ? $standartPage->seo : null,
-                                    ])
+
                                 </div>
                                 <div class="tab-pane fade" id="ru" role="tabpanel"
                                      aria-labelledby="custom-content-below-ru-tab">
@@ -187,10 +181,7 @@
                                                   placeholder="Açıqlama daxil edin ..." name="ru_description"
                                                   style="width: 100%; height: 300px; font-size: 14px; line-height: 23px;padding:15px;">@if(isset($standartPage)) {!! $standartPage->description['ru_description'] !!} @else {!! old('ru_description') !!} @endif</textarea>
                                     </div>
-                                    @include('layouts.seo.createseo', [
-                                        'langKey' => 'ru',
-                                        'data' => isset($standartPage) && isset($standartPage->id) && $standartPage != null  ? $standartPage->seo : null,
-                                    ])
+
                                 </div>
                             </div>
 

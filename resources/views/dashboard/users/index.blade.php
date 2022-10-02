@@ -20,7 +20,7 @@
                     @can('users-create')
                         @include("layouts.partials.topbuttons",['url'=>"users","add"=>true,'home'=>false,'delete'=>true,'type'=>false])
                     @endcan
-                    
+
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>
@@ -78,7 +78,7 @@
                                                 @include("layouts.partials.tablebuttons",[
 "url"=>"users",
 "id"=>$user->id,
-"type"=>$user->type,
+
 "edit"=>true,
 
 "delete"=>true,
@@ -91,7 +91,7 @@
                                     @endforeach
                                     </tbody>
 
-                                </table>  
+                                </table>
 
                                 </div>
                             </div>

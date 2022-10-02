@@ -42,42 +42,7 @@
                                     </a>
                                 </li>
                             @endcan
-                            @can('admin-view')
-                                <li class="nav-item">
-                                    <a href="{{ route('users.index') }}?type=1"
-                                       class="nav-link {{ (request()->is('home/admin')) ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>
-                                            Admin
-                                        </p>
-                                    </a>
 
-                                </li>
-                            @endcan
-                            @can('company-view')
-                                <li class="nav-item">
-                                    <a href="{{ route('users.index') }}?type=3"
-                                       class="nav-link {{ (request()->is('home/company')) ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>
-                                            Company
-                                        </p>
-                                    </a>
-
-                                </li>
-                            @endcan
-                            @can('teachers-view')
-                                <li class="nav-item">
-                                    <a href="{{ route('users.index') }}?type=2"
-                                       class="nav-link {{ (request()->is('home/teacher')) ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>
-                                            Teacher
-                                        </p>
-                                    </a>
-
-                                </li>
-                            @endcan
                             @can('roles-view')
                                 <li class="nav-item">
                                     <a href="{{ route('roles.index') }}"
@@ -96,30 +61,7 @@
                             </li>
                         </ul>
                     </li>
-                    @can('orders-view')
-                        <li class="nav-item">
-                            <a href="{{ route('orders.index') }}"
-                               class="nav-link {{ (request()->is('home/orders*')) ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-shopping-basket"></i>
-                                <p>
-                                    Orders
-                                </p>
-                            </a>
 
-                        </li>
-                    @endcan
-                    @can('payments-view')
-                        <li class="nav-item">
-                            <a href="{{ route('payments.index') }}"
-                               class="nav-link {{ (request()->is('home/payments*')) ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-credit-card"></i>
-                                <p>
-                                    Payments
-                                </p>
-                            </a>
-
-                        </li>
-                    @endcan
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-plus-square"></i>
@@ -129,25 +71,7 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            @can('attributes-view')
-                                <li class="nav-item">
-                                    <a href="{{ route('attributes.index') }}"
-                                       class="nav-link {{(request()->is('home/attributes*')) ? 'active' : ''}}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Attributes</p>
-                                    </a>
-                                </li>
-                            @endcan
 
-                                @can('blogs-view')
-                                    <li class="nav-item">
-                                        <a href="{{ route('blogs.index') }}"
-                                           class="nav-link {{(request()->is('home/notifications*')) ? 'active' : ''}}">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Blogs</p>
-                                        </a>
-                                    </li>
-                                @endcan
 
                             @can('categories-view')
                                 <li class="nav-item">
@@ -190,18 +114,7 @@
 
                         </li>
                     @endcan
-                    @can('comments-view')
-                        <li class="nav-item">
-                            <a href="{{ route('comments.index') }}"
-                               class="nav-link {{ (request()->is('home/comments*')) ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-comment"></i>
-                                <p>
-                                    Comments
-                                </p>
-                            </a>
 
-                        </li>
-                    @endcan
 
                     @can('contacts-view')
                         <li class="nav-item">
@@ -215,17 +128,6 @@
 
                         </li>
                     @endcan
-                    @can('notifications-view')
-                        <li class="nav-item">
-                            <a href="{{ route('notifications.index') }}"
-                               class="nav-link {{ (request()->is('home/notifications*')) ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-bell"></i>
-                                <p>
-                                     Notifications
-                                </p>
-                            </a>
 
-                        </li>
-                    @endcan
                 </ul>
             </nav>

@@ -25,10 +25,10 @@
                 <div class="col-xl-3">
                     <div class="service-style3">
                         <div class="service-front">
-                            <div class="service-img"><img src="{{ $service->bg_image }}" alt="image" class="w-100">
+                            <div class="service-img"><img src="{{ asset('weblabs/assets/img/bg/ab-bg-1-1.jpg') }}" alt="image" class="w-100">
                             </div>
                             <div class="service-content">
-                                <div class="service-icon"><img src="{{ asset('weblabs/assets/img/icon/sr-icon-3-1.png') }}" alt="icon"></div>
+                                <div class="service-icon"><img src="{{ $service->bg_image }}" alt="icon"></div>
                                 <h3 class="service-title h6"><a href="{{ route('weblabs.service_details',$service->id) }}">{{ $service->name[app()->getLocale().'_name'] }}</a></h3></div>
                         </div>
                         <div class="service-back">

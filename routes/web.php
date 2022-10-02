@@ -75,14 +75,6 @@ Route::prefix('/home')->middleware('auth')->group(function ()
 
     Route::resource('settings',SettingsController::class);
 
-    //comments
-    Route::get('comments',[CommentController::class,'index'])->name('comments.index');
-    Route::get('comments/{id}',[CommentController::class,'show'])->name('comments.show');
-    Route::delete('comments/delete/{id}',[CommentController::class,'destroy'])->name('comments.destroy');
-    Route::put('comments/update/{id}',[CommentController::class,'update'])->name('comments.update');
-    Route::patch('comments_change_stat/{id}', [CommentController::class, 'changeStat']);
-    Route::get('/delete-comments',[CommentController::class,'recycle'])->name('comments.recycle');
-    Route::get('/delete-comments/{id}',[CommentController::class,'restore'])->name('comments.restore');
 
     //contacts
     Route::get('contacts',[ContactController::class,'index'])->name('contacts.index');
@@ -97,35 +89,13 @@ Route::prefix('/home')->middleware('auth')->group(function ()
     Route::get('/delete-categories/{id}',[CategoryController::class,'restore'])->name('categories.restore');
 
 
-    //Attributes
-    Route::resource('attributes',AttributeController::class);
-    Route::patch('attributes_change_stat/{id}', [AttributeController::class, 'changeStat']);
-    Route::get('/delete-attributes',[AttributeController::class,'recycle'])->name('attributes.recycle');
-    Route::get('/delete-attributes/{id}',[AttributeController::class,'restore'])->name('attributes.restore');
 
-
-    //Notification
-    Route::resource('notifications',NotificationsController::class);
-    Route::post('api/fetch-user', [NotificationsController::class, 'fetchUser']);
-    Route::get('/delete-notification',[NotificationsController::class,'recycle'])->name('notifications.recycle');
-    Route::get('/delete-notification/{id}',[NotificationsController::class,'restore'])->name('notifications.restore');
-
-    //blogs
-    Route::resource('blogs',BlogsController::class);
-    Route::get('/delete-blogs',[BlogsController::class,'recycle'])->name('blogs.recycle');
-    Route::get('/delete-blogs/{id}',[BlogsController::class,'restore'])->name('blogs.restore');
-    //orders
-    Route::resource('orders',OrdersController::class);
-    Route::get('/delete-orders',[OrdersController::class,'recycle'])->name('orders.recycle');
-    Route::get('/delete-orders/{id}',[OrdersController::class,'restore'])->name('orders.restore');
 
 
     Route::resource('projects',\App\Http\Controllers\Dashboard\ProjectController::class);
     Route::get('/delete-projects',[\App\Http\Controllers\Dashboard\ProjectController::class,'recycle'])->name('projects.recycle');
     Route::get('/delete-projects/{id}',[\App\Http\Controllers\Dashboard\ProjectController::class,'restore'])->name('projects.restore');
 
-    //payments
-    Route::resource('payments',PaymentsController::class);
 
 });
 

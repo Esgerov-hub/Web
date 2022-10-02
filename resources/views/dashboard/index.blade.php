@@ -24,7 +24,7 @@
                 <div class="row mb-2">
                     <div class="col-sm-6">
                         <h1 class="m-0">Dashboard</h1>
-                    </div><!-- /.col --> 
+                    </div><!-- /.col -->
                     <div class="col-sm-6">
                      @if (Session::get('error'))
                     <div class="col-12 mt-1">
@@ -53,22 +53,7 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                @can('products-view')
-                    <div class="col-lg-3 col-6">
-                        <!-- small box -->
-                        <div class="small-box bg-info">
-                            <div class="inner">
-                                <h3>{{ $products->count()}}</h3>
 
-                                <p>Products</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-bag"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    @endcan
                     <!-- ./col -->
                     @can('partners-view')
                     <div class="col-lg-3 col-6">
@@ -82,9 +67,9 @@
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
                             </div>
-                           
+
                             <a href="{{ route('partners.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            
+
                         </div>
                     </div>
                     @endcan
@@ -105,57 +90,6 @@
                             @endcan
                         </div>
                     </div>
-                    @can('teachers-view')
-                    <div class="col-lg-3 col-6">
-                        <!-- small box -->
-                        <div class="small-box bg-warning">
-                            <div class="inner">
-                                <h3>{{ $teachers->count() }}</h3>
-
-                                <p>Teacher</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-person-add"></i>
-                            </div>
-                            @can('users-view')
-                            <a href="{{ route('users.index')}}?type=2" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            @endcan
-                        </div>
-                    </div>
-                    @endcan
-                    <!-- ./col -->
-                    @can('blogs-view')
-                    <div class="col-lg-3 col-6">
-                        <!-- small box -->
-                        <div class="small-box bg-danger">
-                            <div class="inner">
-                                <h3>{{ $blogs->count() }}</h3>
-
-                                <p>Blogs</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-document-text"></i>
-                            </div>
-                            <a href="{{ route('blogs.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    @endcan
-                    @can('notifications-view')
-                    <div class="col-lg-3 col-6">
-                        <!-- small box -->
-                        <div class="small-box bg-danger">
-                            <div class="inner">
-                                <h3>{{ $notifications->count() }}</h3>
-
-                                <p>Notifications</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-reply-all"></i>
-                            </div>
-                            <a href="{{ route('notifications.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    @endcan
 
 
                     @can('contacts-view')
@@ -176,23 +110,6 @@
                     @endcan
 
 
-                    @can('comments-view')
-                    <div class="col-lg-3 col-6">
-                        <!-- small box -->
-                        <div class="small-box bg-danger">
-                            <div class="inner">
-                                <h3>{{ $comments->count() }}</h3>
-
-                                <p>Comments</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-chatbubble-working"></i>
-                            </div>
-                            <a href="{{ route('comments.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    @endcan
-
                     @can('categories-view')
                     <div class="col-lg-3 col-6">
                         <!-- small box -->
@@ -203,7 +120,7 @@
                                 <p>Categories</p>
                             </div>
                             <div class="icon">
-                                
+
                                 <i class="ion ion-chatbubble-working"></i>
                             </div>
                             <a href="{{ route('categories.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>

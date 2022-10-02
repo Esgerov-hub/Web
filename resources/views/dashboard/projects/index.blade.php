@@ -16,9 +16,9 @@
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
-                    @can('blogs-create')
+
                         @include("layouts.partials.topbuttons",['url'=>"projects","add"=>true,'home'=>false,'delete' => true,'type' => false])
-                    @endcan
+
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>

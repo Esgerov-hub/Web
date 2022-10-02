@@ -28,29 +28,12 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
         try {
-            $users = User::where('type', $request->type)->orderBy('name_surname')->get();
-            if ($request->type == 1) {
-                $additional = [
-                    "title" => "Admin"
-                ];
-            } elseif ($request->type == 2) {
-                $additional = [
-                    "title" => "Teacher"
-                ];
-            } elseif ($request->type == 3) {
-                $additional = [
-                    "title" => "Company"
-                ];
-            } else {
-                $additional = [
-                    "title" => "Users"
-                ];
-            }
-            $type = $request->type;
-            return view('dashboard.users.index', compact('users', 'type'));
+            $users = User::orderBy('name_surname')->get();
+
+            return view('dashboard.users.index', compact('users'));
         } catch (\Exception $exception) {
             dd($exception->getMessage());
             return redirect()->back()->with('error', $exception->getMessage());

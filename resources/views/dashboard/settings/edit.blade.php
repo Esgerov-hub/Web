@@ -46,7 +46,7 @@
                             @endif
                         </h1>
                     </div>
-                    
+
                 </div>
             </div><!-- /.container-fluid -->
         </section>
@@ -121,45 +121,7 @@
                                      aria-labelledby="custom-content-below-image-tab">
 
                                     <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                            @if(isset($setting) && $setting != null)
-                                                <div class="avatar-lg">
 
-                                                    <div class="avatar-title bg-light rounded">
-                                                        <img
-                                                            src="{{ isset($setting) && $setting != null && isset($setting->logos['logo_for_dark_web']) ? $setting->logos['logo_for_dark_web'] : asset('assets/images/favicon.ico') }}"
-                                                            id="img-preview" class="avatar-md h-auto" height="200"
-                                                            width="200">
-                                                    </div>
-                                                </div>
-                                            @endif
-                                            <div class="form-group">
-                                                <label>Logo for Dark Web</label>
-                                                <input type="file"
-                                                       class="form-control @error('logo_for_dark_web') is-invalid @enderror"
-                                                       name="logo_for_dark_web">
-
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                            @if(isset($setting) && $setting != null)
-                                                <div class="avatar-lg">
-                                                    <div class="avatar-title bg-light rounded">
-                                                        <img
-                                                            src="{{ isset($setting) && $setting != null && isset($setting->logos['logo_for_dark_mobile']) ? $setting->logos['logo_for_dark_mobile'] : asset('assets/images/favicon.ico') }}"
-                                                            id="img-preview" class="avatar-md h-auto" height="200"
-                                                            width="200">
-                                                    </div>
-                                                </div>
-                                            @endif
-                                            <div class="form-group">
-                                                <label>Logo for dark mobile</label>
-                                                <input type="file"
-                                                       class="form-control @error('logo_for_dark_mobile') is-invalid @enderror"
-                                                       name="logo_for_dark_mobile">
-
-                                            </div>
-                                        </div>
                                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                             @if(isset($setting) && $setting != null)
                                                 <div class="avatar-lg">
@@ -185,17 +147,17 @@
                                                 <div class="avatar-lg">
                                                     <div class="avatar-title bg-light rounded">
                                                         <img
-                                                            src="{{ isset($setting) && $setting != null && isset($setting->logos['logo_lt_mobile']) ? $setting->logos['logo_lt_mobile'] : asset('assets/images/favicon.ico') }}"
+                                                            src="{{ isset($setting) && $setting != null && isset($setting->logos['logo_for_dark_web']) ? $setting->logos['logo_for_dark_web'] : asset('assets/images/favicon.ico') }}"
                                                             id="img-preview" class="avatar-md h-auto" height="200"
                                                             width="200">
                                                     </div>
                                                 </div>
                                             @endif
                                             <div class="form-group">
-                                                <label>Logo lt mobile</label>
+                                                <label>Logo lt Dark Web</label>
                                                 <input type="file"
-                                                       class="form-control @error('logo_lt_mobile') is-invalid @enderror"
-                                                       name="logo_lt_mobile">
+                                                       class="form-control @error('logo_for_dark_web') is-invalid @enderror"
+                                                       name="logo_for_dark_web">
 
                                             </div>
                                         </div>
@@ -370,226 +332,10 @@
                                     <br>
 
 
-                                    <div class="row">
-                                        <h2>Urls</h2>
-                                    </div>
-                                    <br>
-
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Admin Url</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->urls != null && $setting->urls['admin_urls'] != null? $setting->urls['admin_urls'] : null }}"
-                                                           class="form-control" name="admin_urls">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Website Url</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->social_network != null && $setting->urls['website_url'] != null? $setting->urls['website_url']: null }}"
-                                                           class="form-control" name="website_url">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">App Store Url</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->social_network != null && $setting->urls['app_store_url'] != null? $setting->urls['app_store_url']: null }}"
-                                                           class="form-control" name="app_store_url">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Google Play Url</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->social_network != null && $setting->urls['google_play_url'] != null? $setting->urls['google_play_url']: null }}"
-                                                           class="form-control" name="google_play_url">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Api Url</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->urls != null && $setting->urls['api_urls'] != null? $setting->urls['api_urls']: null }}"
-                                                           class="form-control" name="api_urls">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-
-                                    <br>
-
-                                    <div class="row">
-                                        <h2>Keys</h2>
-                                    </div>
-                                    <br>
-
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Google Maps Keys</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->keys != null && $setting->keys['google_maps_keys'] != null? $setting->keys['google_maps_keys']: null }}"
-                                                           class="form-control" name="google_maps_keys">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Google gt Keys</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->keys != null && $setting->keys['google_gt_keys'] != null? $setting->keys['google_gt_keys']: null }}"
-                                                           class="form-control" name="google_gt_keys">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Yandex Id</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->keys != null && $setting->keys['yandex_id'] != null? $setting->keys['yandex_id']: null }}"
-                                                           class="form-control" name="yandex_id">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Recapct Key</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->keys != null && $setting->keys['recapct_key'] != null? $setting->keys['recapct_key']: null }}"
-                                                           class="form-control" name="recapct_key">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Firebase Project Id</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->keys != null && $setting->keys['firebase_project_id'] != null? $setting->keys['firebase_project_id']: null }}"
-                                                           class="form-control" name="firebase_project_id">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Facebook App Id</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->keys != null && $setting->keys['facebook_app_id'] != null? $setting->keys['facebook_app_id']: null }}"
-                                                           class="form-control" name="facebook_app_id">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Null Keys 1</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->keys != null && $setting->keys['null_key_1'] != null? $setting->keys['null_key_1']: null }}"
-                                                           class="form-control" name="null_key_1">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Null Keys 2</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->keys != null && $setting->keys['null_key_2'] != null? $setting->keys['null_key_2']: null }}"
-                                                           class="form-control" name="null_key_2">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <br>
-
-                                    <div class="row">
-                                        <h2>Address</h2>
-                                    </div>
-                                    <br>
-
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Latitude</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->address != null && $setting->address['latitude'] != null? $setting->address['latitude']: null }}"
-                                                           class="form-control" name="latitude">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                                            <div class="form-group">
-                                                <label class="form-label">Longitude</label>
-                                                <div class="controls">
-                                                    <input type="text"
-                                                           value="{{ $setting != null && $setting->address != null && $setting->address['longitude'] != null? $setting->address['longitude']: null }}"
-                                                           class="form-control" name="longitude">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                    <br>
-
                                 </div>
                                 <div class="tab-pane fade" id="az" role="tabpanel"
                                      aria-labelledby="custom-content-below-az-tab">
-                                    <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" class="form-control @error('az_name') is-invalid @enderror"
-                                               name="az_name"
-                                               value="@if(isset($setting)) {{ $setting->name['az_name'] }} @else {{ old('az_name') }} @endif">
 
-                                    </div>
                                     <div class="form-group">
                                         <label>Address</label>
                                         <input type="text"
@@ -599,29 +345,10 @@
 
                                     </div>
 
-                                    <div class="form-group">
-                                        <label>Keywords</label>
-                                        <input type="text"
-                                               class="form-control  tagsinput-2 @error('az_keywords') is-invalid @enderror"
-                                               name="az_keywords"
-                                               value="@if(isset($setting)) {{ $setting->keywords['az_keywords'] }} @else {{ old('az_keywords') }} @endif">
-
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea class="form-control az_description"
-                                                  placeholder="Açıqlama daxil edin ..." name="az_description"
-                                                  style="width: 100%; height: 300px; font-size: 14px; line-height: 23px;padding:15px;">@if(isset($setting)) {!! $setting->description['az_description'] !!} @else {!! old('az_description') !!} @endif</textarea>
-                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="en" role="tabpanel"
                                      aria-labelledby="custom-content-below-en-tab">
-                                    <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" class="form-control @error('en_name') is-invalid @enderror"
-                                               name="en_name"
-                                               value="@if(isset($setting)) {{ $setting->name['en_name'] }} @else {{ old('en_name') }} @endif">
 
-                                    </div>
                                     <div class="form-group">
                                         <label>Address</label>
                                         <input type="text"
@@ -631,29 +358,10 @@
 
                                     </div>
 
-                                    <div class="form-group">
-                                        <label>Keywords</label>
-                                        <input type="text"
-                                               class="form-control  tagsinput-2 @error('en_keywords') is-invalid @enderror"
-                                               name="en_keywords"
-                                               value="@if(isset($setting)) {{ $setting->keywords['en_keywords'] }} @else {{ old('en_keywords') }} @endif">
-
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea class="form-control en_description"
-                                                  placeholder="Açıqlama daxil edin ..." name="en_description"
-                                                  style="width: 100%; height: 300px; font-size: 14px; line-height: 23px;padding:15px;">@if(isset($setting)) {!! $setting->description['en_description'] !!} @else {!! old('en_description') !!} @endif</textarea>
-                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="ru" role="tabpanel"
                                      aria-labelledby="custom-content-below-ru-tab">
-                                    <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" class="form-control @error('ru_name') is-invalid @enderror"
-                                               name="ru_name"
-                                               value="@if(isset($setting)) {{ $setting->name['ru_name'] }} @else {{ old('ru_name') }} @endif">
 
-                                    </div>
                                     <div class="form-group">
                                         <label>Address</label>
                                         <input type="text"
@@ -663,21 +371,7 @@
 
                                     </div>
 
-                                    <div class="form-group">
-                                        <label>Keywords</label>
-                                        <input type="text"
-                                               class="form-control  tagsinput-2 "
-                                               name="ru_keywords"
-                                               value="@if(isset($setting)) {{ $setting->keywords['ru_keywords'] }} @else {{ old('ru_keywords') }} @endif">
 
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea
-                                            class="form-control ru_description @error('ru_description') is-invalid @enderror"
-                                            id="summernote"
-                                            placeholder="Açıqlama daxil edin ..." name="ru_description"
-                                            style="width: 100%; height: 300px; font-size: 14px; line-height: 23px;padding:15px;">@if(isset($setting)) {!! $setting->description['ru_description'] !!} @else {!! old('ru_description') !!} @endif</textarea>
-                                    </div>
                                 </div>
                             </div>
 

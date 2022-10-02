@@ -25,8 +25,5 @@ class StandartPages extends Model
         'bg_image' => 'string',
     ];
 
-    public function seo()
-    {
-        return $this->hasOne(MetaSEO::class, 'element_id', 'id')->where('type','standart_pages');
-    }
+
 }

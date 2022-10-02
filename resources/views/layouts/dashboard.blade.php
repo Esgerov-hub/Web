@@ -75,38 +75,7 @@
                 </div>
             </li>
             <!-- Notifications Dropdown Menu -->
-            <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#">
-                    <i class="far fa-bell"></i>
-                    <span class="badge badge-warning navbar-badge">{{ $comments->count() }}</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                 @foreach($comments as $comment)
-                    <a href="{{ route('comments.index') }}" class="dropdown-item">
-                        <!-- Message Start -->
 
-
-                        <div class="media">
-
-                            <img src="/dashboard/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-                            <div class="media-body">
-                                <h3 class="dropdown-item-title">
-                                    {{ $comment->users->name_surname }}
-                                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                                </h3>
-                                <p class="text-sm">{{ $comment->subject }}</p>
-                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>{{ $comment->created_at->format('H:i') }}</p>
-                            </div>
-
-                        </div>
-
-                        <!-- Message End -->
-                    </a>
-                     @endforeach
-                    <div class="dropdown-divider"></div>
-                    <a href="{{ route('comments.index') }}" class="dropdown-item dropdown-footer">See All Notifications</a>
-                </div>
-            </li>
             {{--        </ul>--}}
             {{--        <ul class="navbar-nav ml-auto">--}}
 

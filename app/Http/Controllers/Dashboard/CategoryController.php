@@ -64,7 +64,7 @@ class CategoryController extends Controller
                 'ru_name' => 'required|string|max:255|min:1',
                 'en_name' => 'required|string|max:255|min:1',
                 'image' => 'image|mimes:jpg,jpeg,pjpeg,pjp,avif,jfif,bmp,ico,cur,png,gif,svg,webp,tif,tiff',
-                'type' => 'required|integer'
+
             ]);
 
             if ($validator->fails()) {
@@ -83,56 +83,23 @@ class CategoryController extends Controller
                 'en_description' => $request->en_description,
             ];
 
-            $slugs = [
-                'az_slug' => Str::slug(trim($request->az_name)),
-                'ru_slug' => Str::slug(trim($request->ru_name)),
-                'en_slug' => Str::slug(trim($request->en_name)),
-            ];
 
-            $meta_title = [
-                'az_meta_title' => $request->az_meta_title,
-                'ru_meta_title' => $request->ru_meta_title,
-                'en_meta_title' => $request->en_meta_title,
-            ];
-            $meta_description = [
-                'az_meta_description' => $request->az_meta_description,
-                'ru_meta_description' => $request->ru_meta_description,
-                'en_meta_description' => $request->en_meta_description,
-            ];
-            $meta_keywords = [
-                'az_meta_keywords' => $request->az_meta_keywords,
-                'ru_meta_keywords' => $request->ru_meta_keywords,
-                'en_meta_keywords' => $request->en_meta_keywords,
-            ];
+
             $imageurl=null;
             if($request->hasFile('image')) {
                 $imageurl=Helper::image_upload($request->image,"categories");
             }
 
-            $iconurl=null;
-            if($request->hasFile('icon')) {
-                $iconurl=Helper::image_upload($request->icon,"categoriesIcons");
-            }
+
+//            dd($imageurl);
             $data = new Categories();
-            $data->uid = $request->uid;
             $data->name = $name;
-            $data->slugs = $slugs;
             $data->description = $description;
             $data->image = $imageurl;
-            $data->icon = $iconurl;
-            $data->type = $request->type;
-            $data->top_id = $request->top_id;
-            $data->order = $request->order;
             $data->active = $request->active;
             $data->save();
 
-            $seo = new MetaSeo();
-            $seo->name = $meta_title;
-            $seo->description = $meta_description;
-            $seo->keyword = $meta_keywords;
-            $seo->type = "categories";
-            $seo->element_id = $data->id;
-            $seo->save();
+//            dd('ss');
 
             return redirect()->back()->with('success', 'Məlumatınız əlavə olundu!');
         } catch (\Exception $e) {
@@ -183,7 +150,7 @@ class CategoryController extends Controller
                 'ru_name' => 'required|string|max:255|min:1',
                 'en_name' => 'required|string|max:255|min:1',
                 'image' => 'image|mimes:jpg,jpeg,pjpeg,pjp,avif,jfif,bmp,ico,cur,png,gif,svg,webp,tif,tiff',
-                'type' => 'required|integer',
+
             ]);
 
             if ($validator->fails()) {
@@ -221,40 +188,12 @@ class CategoryController extends Controller
                 "description->az_description" => $request->az_description,
                 "description->ru_description" => $request->ru_description,
                 "description->en_description" => $request->en_description,
-                "slugs->az_slug" => Str::slug(trim($request->az_name)),
-                "slugs->ru_slug" => Str::slug(trim($request->ru_name)),
-                "slugs->en_slug" => Str::slug(trim($request->en_name)),
-                "top_id" => $request->top_id,
-                "type" => $request->type,
+
                 "image" => $imageurl,
                 "icon" => $iconurl,
-                "order" => $request->order,
+
                 "active" => $request->active
             ]);
-
-
-            $meta_title = [
-                'az_meta_title' => $request->az_meta_title,
-                'ru_meta_title' => $request->ru_meta_title,
-                'en_meta_title' => $request->en_meta_title,
-            ];
-            
-            $meta_description = [
-                'az_meta_description' => $request->az_meta_description,
-                'ru_meta_description' => $request->ru_meta_description,
-                'en_meta_description' => $request->en_meta_description,
-            ];
-            $meta_keywords = [
-                'az_meta_keywords' => $request->az_meta_keywords,
-                'ru_meta_keywords' => $request->ru_meta_keywords,
-                'en_meta_keywords' => $request->en_meta_keywords,
-            ];
-            MetaSeo::where(['element_id' => $category->id,'type' => 'categories'])->update(
-                [
-                    'name' => $meta_title,
-                    'description' => $meta_description,
-                    'keyword' => $meta_keywords,
-                ]);
 
 
 
@@ -298,7 +237,7 @@ class CategoryController extends Controller
     {
         try{
             $categories = Categories::orderBy('id','desc')->onlyTrashed()->get();
-           
+
             return view('dashboard.categories.recycle',compact('categories'));
 
         }catch(\Exception $exception){
@@ -315,5 +254,5 @@ class CategoryController extends Controller
         }catch (\Throwable $exception){
             return response()->json(['error' => $exception->getMessage()]);
         }
-    }  
+    }
 }

@@ -98,20 +98,25 @@
                     <div class="col-xl-3">
                         <div class="service-style3">
                             <div class="service-front">
-                                <div class="service-img"><img src="{{ $service->bg_image }}" alt="image" class="w-100">
+                                <div class="service-img"><img src="{{ asset('weblabs/assets/img/bg/ab-bg-1-1.jpg') }}" alt="image" class="w-100">
                                 </div>
                                 <div class="service-content">
                                     <div class="service-icon"><img
-                                            src="{{ asset('weblabs/assets/img/icon/sr-icon-3-1.png') }}" alt="icon">
+                                            src="{{ $service->bg_image }}" alt="icon">
                                     </div>
-                                    <h3 class="service-title h6"><a
-                                            href="{{ route('weblabs.service_details',$service->id) }}">{{ $service->name[app()->getLocale().'_name'] }}</a>
-                                    </h3></div>
+                                    <h3 class="service-title h6"><a class="text-inherit"
+                                                                    href="{{ route('weblabs.service_details',$service->id) }}">{{ $service->name[app()->getLocale().'_name'] }}</a>
+                                    </h3>
+                                    <p class="service-text">{{ $service->name[app()->getLocale().'_name'] }}</p>
+                                    <a
+                                        href="{{ route('weblabs.service_details',$service->id) }}" class="link-btn">Read
+                                        Details<i
+                                            class="far fa-arrow-right"></i></a></div>
                             </div>
                             <div class="service-back">
                                 <div class="service-content">
                                     <div class="service-icon"><img
-                                            src="{{ asset('weblabs/assets/img/icon/sr-icon-3-1.png') }}" alt="icon">
+                                            src="{{ $service->bg_image }}" alt="icon">
                                     </div>
                                     <h3 class="service-title h6"><a class="text-inherit"
                                                                     href="{{ route('weblabs.service_details',$service->id) }}">{{ $service->name[app()->getLocale().'_name'] }}</a>
@@ -186,7 +191,7 @@
             <div class="row vs-carousel" data-slide-show="4" data-ml-slide-show="3" data-lg-slide-show="3"
                  data-md-slide-show="2" id="projectslide1">
                 @foreach($projects as $project)
-                    <div class="col-xl-3">
+                    <div class="col-xl-3 slick-slide">
                         <div class="project-style2">
                             <div class="project-img"><img src="{{ $project->image }}" alt="project">
                                 <div class="project-shape"></div>

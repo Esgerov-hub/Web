@@ -22,7 +22,7 @@
         <div class="container">
             <div class="row filter-active">
                @foreach($data as $project)
-                <div class="col-md-6 col-xxl-auto filter-item">
+                <div class="col-xl-3 col-xxl-auto filter-item">
                     <div class="project-style2">
                         <div class="project-img">
                             <div class="project-shape"></div>
@@ -38,6 +38,7 @@
             </div>
         </div>
     </section>
+
 @endsection
 @section('weblabs.js')
 

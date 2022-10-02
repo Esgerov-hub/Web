@@ -26,7 +26,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('weblabs/assets/img/favicons/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('weblabs/assets/img/favicons/manifest.html') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="{{ asset('weblabs/assets/img/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>

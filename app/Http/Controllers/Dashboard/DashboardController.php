@@ -18,15 +18,12 @@ class DashboardController extends Controller
     public function index()
     {
         $users = User::where('type',0)->get();
-        $teachers = User::where('type',2)->get();
         $partners = Partners::all();
-        $products = Products::all();
-        $blogs = Blog::all();
+
         $categories = Categories::all();
-        $notifications =  Notifications::all();
-        $comments = Comments::all();
+
         $contacts = ContactUs::all();
 
-        return view('dashboard.index',compact('users','teachers','partners','products','blogs','categories','notifications','comments','contacts'));
+        return view('dashboard.index',compact('users','partners','categories','contacts'));
     }
 }
