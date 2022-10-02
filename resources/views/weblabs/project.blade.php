@@ -8,11 +8,11 @@
 @section('weblabs.content')
     <div class="breadcumb-wrapper" data-bg-src="{{ asset('weblabs/assets/img/breadcumb/breadcumb-bg.jpg') }}">
         <div class="container z-index-common">
-            <div class="breadcumb-content"><h1 class="breadcumb-title">Projects</h1>
+            <div class="breadcumb-content"><h1 class="breadcumb-title">@lang('menu.project')</h1>
                 <div class="breadcumb-menu-wrap">
                     <ul class="breadcumb-menu">
-                        <li><a href="{{ route('weblabs.index') }}">Home</a></li>
-                        <li>Projects</li>
+                        <li><a href="{{ route('weblabs.index') }}">@lang('menu.home')</a></li>
+                        <li>@lang('menu.project')</li>
                     </ul>
                 </div>
             </div>

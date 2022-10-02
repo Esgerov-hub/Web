@@ -16,7 +16,7 @@
                 <div class="col-sm footer-info_group style2">
                     <div class="footer-info">
                         <div class="footer-info_icon"><i class="fal fa-map-marker-alt"></i></div>
-                        <div class="media-body"><span class="footer-info_label">Office Address</span>
+                        <div class="media-body"><span class="footer-info_label">@lang('menu.address')</span>
                             <div class="footer-info_link">{{ $settings->address[app()->getLocale().'_address'] }}</div>
                         </div>
                     </div>
@@ -24,15 +24,15 @@
                 <div class="col-sm footer-info_group style2">
                     <div class="footer-info">
                         <div class="footer-info_icon"><i class="fal fa-clock"></i></div>
-                        <div class="media-body"><span class="footer-info_label">Working Hours</span>
-                            <div class="footer-info_link">Weekdays 8am - 22pm Weekend 10am - 12pm</div>
+                        <div class="media-body"><span class="footer-info_label">@lang('menu.work_time')</span>
+                            <div class="footer-info_link">@lang('menu.work_date')</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm footer-info_group style2">
                     <div class="footer-info">
                         <div class="footer-info_icon"><i class="fal fa-phone-volume"></i></div>
-                        <div class="media-body"><span class="footer-info_label">Contact Us</span>
+                        <div class="media-body"><span class="footer-info_label">@lang('menu.contact')</span>
                             <div class="footer-info_link"><a href="mailto:{{ $settings->social_network['email_1'] }}">{{ $settings->social_network['email_1'] }}</a><br><a
                                     href="tel:{{ $settings->social_network['phone_1'] }}">{{ $settings->social_network['phone_1'] }}</a></div>
                         </div>
@@ -45,7 +45,7 @@
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-md-6 col-lg-4 col-xl-auto">
-                    <div class="widget footer-widget"><h3 class="widget_title">About Us</h3>
+                    <div class="widget footer-widget"><h3 class="widget_title">@lang('menu.contact')</h3>
                         <div class="vs-widget-about"><p class="footer-text">Intrinsicly evisculate emerging cutting edge
                                 scenarios redefine future-proof e-markets demand line</p>
                             <div class="footer-social">
@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-4 col-xl-auto">
-                    <div class="widget footer-widget"><h3 class="widget_title">Office Maps</h3>
+                    <div class="widget footer-widget"><h3 class="widget_title">@lang('menu.baku_address')</h3>
                         <div class="footer-map">
                             <iframe title="office location map"
                                     src="{{ $settings->social_network['gmaps_url'] }}"

@@ -8,11 +8,11 @@
 @section('weblabs.content')
     <div class="breadcumb-wrapper" data-bg-src="{{ asset('weblabs/assets/img/breadcumb/breadcumb-bg.jpg') }}">
         <div class="container z-index-common">
-            <div class="breadcumb-content"><h1 class="breadcumb-title">About Us</h1>
+            <div class="breadcumb-content"><h1 class="breadcumb-title">@lang('menu.about')</h1>
                 <div class="breadcumb-menu-wrap">
                     <ul class="breadcumb-menu">
-                        <li><a href="{{ route('weblabs.index') }}">Home</a></li>
-                        <li>About Us</li>
+                        <li><a href="{{ route('weblabs.index') }}">@lang('menu.home')</a></li>
+                        <li>@lang('menu.about')</li>
                     </ul>
                 </div>
             </div>
@@ -35,13 +35,13 @@
                             <div class="col-sm-auto">
                                 <div class="about-call">
                                     <div class="about-call__icon"><i class="fas fa-phone-alt"></i></div>
-                                    <div class="media-body"><span class="about-call__label">Call To Ask Any Queary</span>
+                                    <div class="media-body"><span class="about-call__label">@lang('menu.we_contact')</span>
                                         <p class="about-call__number"><a href="tel:{{ $settings->social_network['phone_1'] }}">{{ $settings->social_network['phone_1'] }}</a></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="{{ route('weblabs.contact') }}" class="vs-btn">Contact Us<i class="far fa-long-arrow-right"></i></a></div>
+                        <a href="{{ route('weblabs.contact') }}" class="vs-btn">@lang('menu.contact')<i class="far fa-long-arrow-right"></i></a></div>
                 </div>
             </div>
             @endforeach

@@ -10,14 +10,14 @@
         </div>
         <div class="vs-mobile-menu">
             <ul>
-                <li><a href="{{ route('weblabs.index') }}">Home</a>
+                <li><a href="{{ route('weblabs.index') }}">@lang('menu.home')</a>
                 </li>
-                <li><a href="{{ route('weblabs.about') }}">About Us</a></li>
-                <li ><a href="{{ route('weblabs.service') }}">Service</a>
+                <li><a href="{{ route('weblabs.about') }}">@lang('menu.about')</a></li>
+                <li ><a href="{{ route('weblabs.service') }}">@lang('menu.service')</a>
                 </li>
-                <li><a href="{{ route('weblabs.project') }}">Project</a></li>
-                <li><a href="{{ route('weblabs.teams') }}">Teams</a></li>
-                <li><a href="{{ route('weblabs.contact') }}">Contact Us</a></li>
+                <li><a href="{{ route('weblabs.project') }}">@lang('menu.project')</a></li>
+{{--                <li><a href="{{ route('weblabs.teams') }}">Teams</a></li>--}}
+                <li><a href="{{ route('weblabs.contact') }}">@lang('menu.contact')</a></li>
                 <li class="menu-item-has-children"><a href="">{{ LaravelLocalization::getCurrentLocaleNative() }}</a>
                     <ul class="sub-menu">
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -33,46 +33,7 @@
         </div>
     </div>
 </div>
-<div class="sidemenu-wrapper d-none d-lg-block">
-    <div class="sidemenu-content">
-        <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
-        <div class="widget">
-            <div class="vs-widget-about">
-                <div class="footer-logo"><a href="{{ route('weblabs.index') }}"><img src="{{ $settings->logos['logo_lt_web'] }}" alt="TechBiz" class="logo"></a>
-                </div>
-                <p class="footer-text">Intrinsicly evisculate emerging cutting edge scenarios redefine future-proof
-                    e-markets demand line</p>
-                <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i
-                            class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i
-                            class="fab fa-behance"></i></a> <a href="#"><i class="fab fa-youtube"></i></a></div>
-            </div>
-        </div>
-        <div class="widget"><h4 class="widget_title">Gallery Posts</h4>
-            <div class="sidebar-gallery">
-                <div class="gallery-thumb"><img src="{{ asset('weblabs/assets/img/widget/gal-1-1.jpg') }}" alt="Gallery Image" class="w-100">
-                </div>
-                <div class="gallery-thumb"><img src="{{ asset('weblabs/assets/img/widget/gal-1-2.jpg') }}" alt="Gallery Image" class="w-100">
-                </div>
-                <div class="gallery-thumb"><img src="{{ asset('weblabs/assets/img/widget/gal-1-3.jpg') }}" alt="Gallery Image" class="w-100">
-                </div>
-                <div class="gallery-thumb"><img src="{{ asset('weblabs/assets/img/widget/gal-1-4.jpg') }}" alt="Gallery Image" class="w-100">
-                </div>
-                <div class="gallery-thumb"><img src="{{ asset('weblabs/assets/img/widget/gal-1-5.jpg') }}" alt="Gallery Image" class="w-100">
-                </div>
-                <div class="gallery-thumb"><img src="{{ asset('weblabs/assets/img/widget/gal-1-6.jpg') }}" alt="Gallery Image" class="w-100">
-                </div>
-            </div>
-        </div>
-        <div class="widget"><h3 class="widget_title">Office Maps</h3>
-            <div class="footer-map">
-                <iframe title="office location map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163720.11965853968!2d8.496481908353967!3d50.121347879150306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd096f477096c5%3A0x422435029b0c600!2sFrankfurt%2C%20Germany!5e0!3m2!1sen!2sbd!4v1651732317319!5m2!1sen!2sbd"
-                        width="200" height="180" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
+
 <header class="vs-header header-layout3">
 
     <div class="header-top">
@@ -81,17 +42,15 @@
                 <div class="col-md-auto text-center text-md-start">
                     <div class="header-links style-white">
                         <ul>
-                            <li class="d-none d-xxl-inline-block"><i class="fal fa-map-marker-alt"></i>2529 Pen Road,
-                                New York
-                            </li>
-                            <li><i class="far fa-clock"></i>Mon - Fri: 8:00AM - 6:00PM</li>
+
+                            <li><i class="far fa-clock"></i>Mon - Fri: 9:00AM - 6:00PM</li>
                             <li><i class="far fa-envelope"></i><a
                                     href="mailto:{{ $settings->social_network['email_1'] }}">{{ $settings->social_network['email_1'] }}</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-auto d-none d-md-block">
-                    <div class="header-social style-white"><span class="social-title">Follow Us On: </span>
+                    <div class="header-social style-white"><span class="social-title">@lang('menu.follow'): </span>
                         <a href="{{ $settings->social_network['facebook_url'] }}"><i class="fab fa-facebook-f"></i></a>
                         <a href="{{ $settings->social_network['instagram_url'] }}"><i class="fab fa-instagram"></i></a>
                         <a href="{{ $settings->social_network['linkedin_url'] }}"><i class="fab fa-linkedin"></i></a>

@@ -8,11 +8,11 @@
 @section('weblabs.content')
     <div class="breadcumb-wrapper" data-bg-src="{{ asset('weblabs/assets/img/breadcumb/breadcumb-bg.jpg') }}">
         <div class="container z-index-common">
-            <div class="breadcumb-content"><h1 class="breadcumb-title">Contact Us</h1>
+            <div class="breadcumb-content"><h1 class="breadcumb-title">@lang('menu.contact')</h1>
                 <div class="breadcumb-menu-wrap">
                     <ul class="breadcumb-menu">
-                        <li><a href="{{ route('weblabs.index') }}">Home</a></li>
-                        <li>Contact Us</li>
+                        <li><a href="{{ route('weblabs.index') }}">@lang('menu.home')</a></li>
+                        <li>@lang('menu.contact')</li>
                     </ul>
                 </div>
             </div>
@@ -26,25 +26,24 @@
                      aria-labelledby="nav-GermanyAddress-tab">
                     <div class="row">
                         <div class="col-lg-6 mb-30">
-                            <div class="contact-box"><h3 class="contact-box__title h4">Germany Office Address</h3>
-                                <p class="contact-box__text">Completely recaptiualize 24/7 communities via standards
-                                    compliant metrics whereas web-enabled content</p>
+                            <div class="contact-box"><h3 class="contact-box__title h4">@lang('menu.baku_address')</h3>
+{{--                                <p class="contact-box__text"></p>--}}
+                                <br>
                                 <div class="contact-box__item">
                                     <div class="contact-box__icon"><i class="fal fa-phone-alt"></i></div>
-                                    <div class="media-body"><h4 class="contact-box__label">Phone Number & Email</h4>
+                                    <div class="media-body"><h4 class="contact-box__label">@lang('menu.sosial_contact')</h4>
                                         <p class="contact-box__info"><a href="tel:{{ $settings->social_network['phone_1'] }}">{!!   $settings->social_network['phone_1'] !!}</a><a
                                                 href="mailto:{!!   $settings->social_network['email_1'] !!}">{!!   $settings->social_network['email_1'] !!}</a></p></div>
                                 </div>
                                 <div class="contact-box__item">
                                     <div class="contact-box__icon"><i class="far fa-map-marker-alt"></i></div>
-                                    <div class="media-body"><h4 class="contact-box__label">Our Office Address</h4>
+                                    <div class="media-body"><h4 class="contact-box__label">@lang('menu.address')</h4>
                                         <p class="contact-box__info">{!! $settings->address[app()->getLocale().'_address'] !!}</p></div>
                                 </div>
                                 <div class="contact-box__item">
                                     <div class="contact-box__icon"><i class="far fa-clock"></i></div>
-                                    <div class="media-body"><h4 class="contact-box__label">Official Work Time</h4>
-                                        <p class="contact-box__info">7:00am - 6:00pm ( Mon - Fri ) Sat, Sun & Holiday
-                                            Closed</p></div>
+                                    <div class="media-body"><h4 class="contact-box__label">@lang('menu.work_time')</h4>
+                                        <p class="contact-box__info">@lang('menu.work_date')</p></div>
                                 </div>
                             </div>
                         </div>
@@ -52,28 +51,28 @@
                             <div class="col-12 mt-1" id="submitdataform-response">
 
                             </div>
-                            <div class="contact-box"><h3 class="contact-box__title h4">Leave a Message</h3>
-                                <p class="contact-box__text">We’re Ready To Help You</p>
+                            <div class="contact-box"><h3 class="contact-box__title h4">@lang('menu.we_contact')</h3>
+                                <p class="contact-box__text">@lang('menu.help')</p>
 
                                 <form class="contact-box__form ajax-contact" id="submitdataform">
                                     @csrf
                                     <div class="row gx-20">
                                         <div class="col-md-6 form-group"><input type="text" name="namesurname" required
-                                                                                placeholder="Your Name"> <i
+                                                                                placeholder="@lang('menu.name')"> <i
                                                 class="fal fa-user"></i></div>
                                         <div class="col-md-6 form-group"><input type="email" name="email" required
-                                                                                placeholder="Email Address"> <i
+                                                                                placeholder="@lang('menu.email')"> <i
                                                 class="fal fa-envelope"></i></div>
                                         <div class="col-12 form-group"><input type="text" name="phone" required
-                                                                              placeholder="Your Phone"> <i
+                                                                              placeholder="@lang('menu.phone')"> <i
                                                 class="fal fa-phone"></i></div>
                                         <div class="col-12 form-group"><input type="text" name="subject" required
-                                                                              placeholder="Your subject"> </div>
+                                                                              placeholder="@lang('menu.subject')"> </div>
                                         <div class="col-12 form-group"><textarea name="message"
-                                                                                 placeholder="Type Your Message"></textarea>
+                                                                                 placeholder="@lang('menu.messages')"></textarea>
                                         </div>
                                         <div class="col-12">
-                                            <button class="vs-btn" id="submitbtn">Submit Message<i class="far fa-arrow-right"></i></button>
+                                            <button class="vs-btn" id="submitbtn">@lang('menu.submit_messages')<i class="far fa-arrow-right"></i></button>
                                         </div>
                                     </div>
                                 </form>

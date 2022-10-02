@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from azim.commonsupport.com/Morriston/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Sep 2022 18:48:28 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Weblabs - @yield('weblabs.title')</title>
     <meta name="author" content="vecuro">
-    <meta name="description" content="WebLabs">
-    <meta name="keywords" content="WebLabs">
+    <meta name="description" content="WebLabs.az">
+    <meta name="keywords" content="WebLabs.az">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('weblabs/assets/img/favicons/apple-icon-57x57.png') }}">
@@ -57,6 +56,4 @@
     <script src="{{ asset('weblabs/assets/js/main.js') }}"></script>
 @yield('aheng.js')
 </body><!-- End of .page_wrapper -->
-
-<!-- Mirrored from azim.commonsupport.com/Morriston/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Sep 2022 18:53:09 GMT -->
 </html>

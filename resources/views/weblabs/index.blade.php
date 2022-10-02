@@ -38,8 +38,7 @@
                         class="ls-l ls-hide-tablet ls-hide-phone ls-html-layer"
                         data-ls="offsetyin:50; durationin:1500; delayin:900; easingin:easeOutQuint; offsetyout:50; durationout:1500; easingout:easeOutQuint; position:relative;">
                         <div class="ls-btn-group justify-content-center"><a href="{{ route('weblabs.about') }}"
-                                                                            class="vs-btn ls-hero-btn">ABOUT
-                                US<i class="far fa-arrow-right"></i></a></div>
+                                                                            class="vs-btn ls-hero-btn">@lang('menu.about')<i class="far fa-arrow-right"></i></a></div>
                     </div>
 {{--                    <p style="text-align:center; font-style:normal; text-decoration:none; text-transform:none; font-weight:600; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Exo; color:#ffffff; top:310px; left:50%; width:1000px; font-size:40px;"--}}
 {{--                       class="ls-l ls-hide-desktop ls-hide-phone ls-text-layer"--}}
@@ -54,7 +53,7 @@
                         class="ls-l ls-hide-desktop ls-hide-phone ls-html-layer"
                         data-ls="offsetyin:50; durationin:1500; delayin:900; easingin:easeOutQuint; offsetyout:50; durationout:1500; easingout:easeOutQuint; position:relative;">
                         <div class="ls-btn-group justify-content-center"><a href="{{ route('weblabs.service') }}"
-                                                                            class="vs-btn ls-hero-btn">Service<i
+                                                                            class="vs-btn ls-hero-btn">@lang('menu.service')<i
                                     class="far fa-arrow-right"></i></a></div>
                     </div>
                     <div
@@ -72,7 +71,7 @@
                         class="ls-l ls-hide-desktop ls-hide-tablet ls-html-layer"
                         data-ls="offsetyin:50; durationin:1500; delayin:900; easingin:easeOutQuint; offsetyout:50; durationout:1500; easingout:easeOutQuint; position:relative;">
                         <div class="ls-btn-group justify-content-center"><a href="{{ route('weblabs.project') }}"
-                                                                            class="vs-btn ls-hero-btn">Projects<i
+                                                                            class="vs-btn ls-hero-btn">@lang('menu.project')<i
                                     class="far fa-arrow-right"></i></a></div>
                     </div>
                 </div>
@@ -85,10 +84,10 @@
             <div class="row justify-content-center justify-content-lg-between align-items-center">
                 <div class="col-md-8 col-lg-6 text-center text-lg-start">
                     <div class="title-area">
-                        <h2 class="sec-title3 h1">We Provide Great IT & Business Solutions</h2></div>
+                        <h2 class="sec-title3 h1">@lang('menu.service')</h2></div>
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <div class="sec-btns2"><a href="{{ route('weblabs.service') }}" class="vs-btn">View All Services<i
+                    <div class="sec-btns2"><a href="{{ route('weblabs.service') }}" class="vs-btn">@lang('menu.service')<i
                                 class="far fa-arrow-right"></i></a></div>
                 </div>
             </div>
@@ -144,7 +143,7 @@
                             <div class="counter-media__icon"><img src="/weblabs/assets/img/icon/count-1-2.png"
                                                                   alt="icon"></div>
                             <div class="media-body"><span class="counter-media__number h1 text-white">{{ $projects->count() }}</span>
-                                <p class="counter-media__title text-white">Projects</p></div>
+                                <p class="counter-media__title text-white">@lang('menu.project')</p></div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-auto">
@@ -153,7 +152,7 @@
                                                                   alt="icon"></div>
                             <div class="media-body"><span
                                     class="counter-media__number h1 text-white">{{ $services->count() }}</span>
-                                <p class="counter-media__title text-white">Services</p></div>
+                                <p class="counter-media__title text-white">@lang('menu.service')</p></div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-auto">
@@ -162,7 +161,7 @@
                                                                   alt="icon"></div>
                             <div class="media-body"><span
                                     class="counter-media__number h1 text-white">{{ $partners->count() }}</span>
-                                <p class="counter-media__title text-white">Partners</p></div>
+                                <p class="counter-media__title text-white">@lang('menu.partner')</p></div>
                         </div>
                     </div>
                 </div>
@@ -175,7 +174,7 @@
             <div class="row justify-content-between">
                 <div class="col-lg-auto text-center text-lg-start">
                     <div class="title-area">
-                        <h2 class="sec-title3 h1">Our Successful Projects</h2></div>
+                        <h2 class="sec-title3 h1">@lang('menu.project')</h2></div>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <div class="sec-btns">
