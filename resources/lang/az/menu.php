@@ -8,6 +8,7 @@ return
     'service' => 'Xidmətlər',
     'partner' => 'Əməkdaşlar',
     'blog' => 'Xəbərlər',
+    'error' => 'Error Səhifə',
     'contact' => 'Əlaqə',
     'team' => 'Komanda',
     'student' => 'Tələbələr',

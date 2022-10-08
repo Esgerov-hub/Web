@@ -1,79 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stoody | 404 Page not found</title>
+@extends('layouts.app')
+@section('weblabs.title')
+   404
+@endsection
+@section('weblabs.css')
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('dashboard/plugins/fontawesome-free/css/all.min.css') }}">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('dashboard/dist/css/adminlte.min.css') }}">
-</head>
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
-
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>404 Error Page</h1>
-          </div>
-        
+@endsection
+@section('weblabs.content')
+    <div class="breadcumb-wrapper" data-bg-src="{{ asset('weblabs/assets/img/breadcumb/breadcumb-bg.jpg') }}">
+        <div class="container z-index-common">
+            <div class="breadcumb-content"><h1 class="breadcumb-title">@lang('menu.error')</h1>
+                <div class="breadcumb-menu-wrap">
+                    <ul class="breadcumb-menu">
+                        <li><a href="{{ route('weblabs.index') }}">@lang('menu.home')</a></li>
+                        <li>@lang('menu.error')</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="error-page">
-        <h2 class="headline text-warning"> 404</h2>
-
-        <div class="error-content">
-          <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Page not found.</h3>
-
-          <p>
-            We could not find the page you were looking for.
-            Meanwhile, you may <a href="{{ route('login') }}">return to dashboard</a> or try using the search form.
-          </p>
-
-          
-        </div>
-        <!-- /.error-content -->
-      </div>
-      <!-- /.error-page -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <!-- <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.1.0
     </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer> -->
+    <section class="space">
+        <div class="container">
+            <div class="error-content text-center"><h2 class="error-number">4<span class="text-theme">0</span>4</h2>
+                <a href="{{ route('weblabs.index') }}" class="vs-btn"><i
+                        class="fas fa-home ms-0 me-2"></i>@lang('menu.home')</a></div>
+        </div>
+    </section>
+@endsection
+@section('weblabs.js')
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="{{ asset('dashboard/plugins/jquery/jquery.min.js') }}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('dashboard/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('dashboard/dist/js/adminlte.min.js') }}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{ asset('dashboard/dist/js/demo.js') }}"></script>
-</body>
-</html>
+@endsection

@@ -145,9 +145,9 @@ class StandartPagesController extends Controller
             }
 
             if ($request->hasFile('bg_image')) {
-                if ($imageurl != null) {
-                    Helper::delete_image($imageurl);
-                }
+//                if ($imageurl != null) {
+//                    Helper::delete_image($imageurl);
+//                }
                 $imageurl = Helper::image_upload($request->bg_image, "standartpages");
             }
 

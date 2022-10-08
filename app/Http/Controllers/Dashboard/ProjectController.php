@@ -213,6 +213,13 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        try {
+
+            $project->delete();
+
+            return redirect()->back()->with('success', 'Məlumatınız ləvğ edildi');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', $e->getMessage());
+        }
     }
 }

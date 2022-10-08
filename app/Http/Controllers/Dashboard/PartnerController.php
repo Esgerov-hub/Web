@@ -133,9 +133,9 @@ class PartnerController extends Controller
             }
 
             if($request->hasFile('image')) {
-                if($imageurl!=null){
-                    Helper::delete_image($imageurl);
-                }
+//                if($imageurl!=null){
+//                    Helper::delete_image($imageurl);
+//                }
                 $imageurl=Helper::image_upload($request->image,"partners");
             }
 
@@ -166,19 +166,19 @@ class PartnerController extends Controller
     {
 
         try {
-            $partner=Partners::where('id',$partner->id)->withTrashed()->first();
-            if(isset($partner->deleted_at) && $partner->deleted_at!=null){
-                if(isset($partner->image) && $partner->image!=null){
-                    Helper::delete_image($partner->image);
-                }
-                // View
-                $partner->forceDelete();
-            }else{
-                $partner->update([
-                    "status"=>false
-                ]);
+//            $partner=Partners::where('id',$partner->id)->withTrashed()->first();
+//            if(isset($partner->deleted_at) && $partner->deleted_at!=null){
+//                if(isset($partner->image) && $partner->image!=null){
+//                    Helper::delete_image($partner->image);
+//                }
+//                // View
+//                $partner->forceDelete();
+//            }else{
+//                $partner->update([
+//                    "status"=>false
+//                ]);
                 $partner->delete();
-            }
+//            }
             return redirect()->back()->with('info', 'Məlumatınız ləvğ edildi');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', $e->getMessage());
@@ -190,7 +190,7 @@ class PartnerController extends Controller
     {
         try{
             $partners = Partners::orderBy('id','desc')->onlyTrashed()->get();
-           
+
             return view('dashboard.partners.recycle',compact('partners'));
 
         }catch(\Exception $exception){

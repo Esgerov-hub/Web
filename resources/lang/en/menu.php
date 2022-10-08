@@ -9,6 +9,7 @@ return
     'partner' => 'Partners',
     'blog' => 'Blogs',
     'contact' => 'Contact Us',
+    'error' => 'Error Page',
     'team' => 'Team',
     'student' => 'Student',
     'project' => 'Project',

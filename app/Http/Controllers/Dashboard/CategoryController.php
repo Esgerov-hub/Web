@@ -19,6 +19,7 @@ class CategoryController extends Controller
         $this->middleware('permission:categories-edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:categories-delete', ['only' => ['destroy']]);
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -44,7 +45,7 @@ class CategoryController extends Controller
         try {
             $categories = Categories::orderBy("id", "DESC")->get();
             $category = null;
-            return view('dashboard.categories.create_edit', compact('categories','category'));
+            return view('dashboard.categories.create_edit', compact('categories', 'category'));
         } catch (\Throwable $e) {
             return redirect()->back()->with('errors', $e->getMessage());
         }
@@ -53,7 +54,7 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -84,10 +85,9 @@ class CategoryController extends Controller
             ];
 
 
-
-            $imageurl=null;
-            if($request->hasFile('image')) {
-                $imageurl=Helper::image_upload($request->image,"categories");
+            $imageurl = null;
+            if ($request->hasFile('image')) {
+                $imageurl = Helper::image_upload($request->image, "categories");
             }
 
 
@@ -110,7 +110,7 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Categories  $categories
+     * @param \App\Models\Categories $categories
      * @return \Illuminate\Http\Response
      */
     public function show(Categories $categories)
@@ -121,7 +121,7 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Categories  $categories
+     * @param \App\Models\Categories $categories
      * @return \Illuminate\Http\Response
      */
     public function edit(Categories $category)
@@ -129,7 +129,7 @@ class CategoryController extends Controller
         try {
             $category = Categories::where("id", $category->id)->with('seo')->first();
             $categories = Categories::orderBy("id", "DESC")->get();
-            return view('dashboard.categories.create_edit', compact('category','categories'));
+            return view('dashboard.categories.create_edit', compact('category', 'categories'));
         } catch (\Exception $e) {
             return redirect()->back()->with('errors', $e->getMessage());
         }
@@ -138,8 +138,8 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Categories  $categories
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\Categories $categories
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Categories $category)
@@ -163,9 +163,9 @@ class CategoryController extends Controller
             }
 
             if ($request->hasFile('image')) {
-                if ($imageurl != null) {
-                    Helper::delete_image($imageurl);
-                }
+//                if ($imageurl != null) {
+//                    Helper::delete_image($imageurl);
+//                }
                 $imageurl = Helper::image_upload($request->image, "categories");
             }
 
@@ -196,7 +196,6 @@ class CategoryController extends Controller
             ]);
 
 
-
             return redirect()->back()->with('success', 'Məlumatınız düzəliş olundu!');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', $e->getMessage());
@@ -206,28 +205,17 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Categories  $categories
+     * @param \App\Models\Categories $categories
      * @return \Illuminate\Http\Response
      */
     public function destroy(Categories $category)
     {
         try {
-            $category=Categories::where('id',$category->id)->withTrashed()->first();
-            if(isset($category->deleted_at) && $category->deleted_at!=null){
-                if(isset($category->image) && $category->image!=null){
-                    Helper::delete_image($category->image);
-                }
-                // View
-                $category->forceDelete();
-            }else{
-                $category->update([
-                    "active"=>false
-                ]);
-                $category->delete();
-            }
+
+            $category->delete();
 
             return redirect()->back()->with('success', 'Məlumatınız ləvğ edildi.');
-        }catch (\Throwable $exception){
+        } catch (\Throwable $exception) {
             return response()->json(['error' => $exception->getMessage()]);
         }
     }
@@ -235,23 +223,23 @@ class CategoryController extends Controller
 
     public function recycle()
     {
-        try{
-            $categories = Categories::orderBy('id','desc')->onlyTrashed()->get();
+        try {
+            $categories = Categories::orderBy('id', 'desc')->onlyTrashed()->get();
 
-            return view('dashboard.categories.recycle',compact('categories'));
+            return view('dashboard.categories.recycle', compact('categories'));
 
-        }catch(\Exception $exception){
-            return redirect()->back()->with('error',$exception->getMessage());
+        } catch (\Exception $exception) {
+            return redirect()->back()->with('error', $exception->getMessage());
         }
     }
 
-    public function restore(Categories $categories,$id)
+    public function restore(Categories $categories, $id)
     {
         try {
-            $categories = Categories::where('id',$id)->withTrashed()->restore();
+            $categories = Categories::where('id', $id)->withTrashed()->restore();
 
             return redirect()->back()->with('success', 'Məlumatınız geri qaytarıldı.');
-        }catch (\Throwable $exception){
+        } catch (\Throwable $exception) {
             return response()->json(['error' => $exception->getMessage()]);
         }
     }

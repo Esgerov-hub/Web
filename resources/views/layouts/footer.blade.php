@@ -46,8 +46,8 @@
             <div class="row justify-content-between">
                 <div class="col-md-6 col-lg-4 col-xl-auto">
                     <div class="widget footer-widget"><h3 class="widget_title">@lang('menu.contact')</h3>
-                        <div class="vs-widget-about"><p class="footer-text">Intrinsicly evisculate emerging cutting edge
-                                scenarios redefine future-proof e-markets demand line</p>
+                        <div class="vs-widget-about">
+                            <p class="footer-text">{{ $abouts->name[app()->getLocale().'_name'] }}</p>
                             <div class="footer-social">
                                 <a href="{{ $settings->social_network['facebook_url'] }}"><i class="fab fa-facebook-f"></i></a>
                                 <a href="{{ $settings->social_network['instagram_url'] }}"><i class="fab fa-instagram"></i></a>
