@@ -43,7 +43,7 @@
                     <div class="header-links style-white">
                         <ul>
 
-                            <li><i class="far fa-clock"></i>Mon - Fri: 9:00AM - 6:00PM</li>
+                            <li><i class="far fa-clock"></i>@lang('menu.mon') - @lang('menu.fri'): 9:00AM - 6:00PM</li>
                             <li><i class="far fa-envelope"></i><a
                                     href="mailto:{{ $settings->social_network['email_1'] }}">{{ $settings->social_network['email_1'] }}</a></li>
                         </ul>

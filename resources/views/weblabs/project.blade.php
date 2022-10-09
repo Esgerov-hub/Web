@@ -6,7 +6,7 @@
 
 @endsection
 @section('weblabs.content')
-    <div class="breadcumb-wrapper" data-bg-src="{{ asset('weblabs/assets/img/breadcumb/breadcumb-bg.jpg') }}">
+    <div class="breadcumb-wrapper" data-bg-src="{{ asset('weblabs/assets/img/weblabs.jpeg') }}">
         <div class="container z-index-common">
             <div class="breadcumb-content"><h1 class="breadcumb-title">@lang('menu.project')</h1>
                 <div class="breadcumb-menu-wrap">
@@ -30,7 +30,8 @@
                                                                                       class="icon-btn style4 popup-image"><i
                                     class="far fa-search"></i></a></div>
                         <div class="project-content"><span class="project-label">{{ $project->category->name[app()->getLocale().'_name'] }}</span>
-                            <h3 class="project-title h5"><a href="{{ $project->url }}">{{ $project->title[app()->getLocale().'_name'] }}</a></h3></div>
+                            <h3 class="project-title h5"><a href="{{ $project->url }}"
+                                                            class="text-reset">{{ $project->title[app()->getLocale().'_name'] }}</a></h3></div>
                     </div>
                 </div>
                 @endforeach

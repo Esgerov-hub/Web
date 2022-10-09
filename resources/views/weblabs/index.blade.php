@@ -25,10 +25,10 @@
                         class="ls-l ls-text-layer"
                         data-ls="durationin:1500; delayin:1000; parallax:true; parallaxlevel:8; parallaxaxis:x;">WEBLABS
                     </div>
-{{--                    <p style="font-size:20px; text-align:center; font-style:normal; text-decoration:none; text-transform:none; font-weight:600; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Exo; color:#ffffff; top:315px; left:50%; width:1000px;"--}}
-{{--                       class="ls-l ls-hide-tablet ls-hide-phone ls-text-layer"--}}
-{{--                       data-ls="offsetxin:300; durationin:1500; delayin:400; easingin:easeOutQuint; offsetxout:300; durationout:1500; easingout:easeOutQuint;">--}}
-{{--                        {{ $slider->name[app()->getLocale().'_name'] }}</p>--}}
+                    {{--                    <p style="font-size:20px; text-align:center; font-style:normal; text-decoration:none; text-transform:none; font-weight:600; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Exo; color:#ffffff; top:315px; left:50%; width:1000px;"--}}
+                    {{--                       class="ls-l ls-hide-tablet ls-hide-phone ls-text-layer"--}}
+                    {{--                       data-ls="offsetxin:300; durationin:1500; delayin:400; easingin:easeOutQuint; offsetxout:300; durationout:1500; easingout:easeOutQuint;">--}}
+                    {{--                        {{ $slider->name[app()->getLocale().'_name'] }}</p>--}}
                     <h1 style="top:370px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:72px; color:#ffffff; font-family:Exo; width:1000px;"
                         class="ls-l ls-hide-tablet ls-hide-phone ls-text-layer"
                         data-ls="offsetxin:-200; durationin:1500; easingin:easeOutQuint; offsetxout:-100; durationout:1500; easingout:easeOutQuint; position:relative;">
@@ -37,13 +37,14 @@
                         style="top:595px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:24px; width:1000px;"
                         class="ls-l ls-hide-tablet ls-hide-phone ls-html-layer"
                         data-ls="offsetyin:50; durationin:1500; delayin:900; easingin:easeOutQuint; offsetyout:50; durationout:1500; easingout:easeOutQuint; position:relative;">
-                        <div class="ls-btn-group justify-content-center"><a href="{{ route('weblabs.about') }}"
-                                                                            class="vs-btn ls-hero-btn">@lang('menu.about')<i class="far fa-arrow-right"></i></a></div>
+                        <div class="ls-btn-group justify-content-center"><a href="{{ route('weblabs.contact') }}"
+                                                                            class="vs-btn ls-hero-btn">@lang('menu.contact')
+                                <i class="far fa-arrow-right"></i></a></div>
                     </div>
-{{--                    <p style="text-align:center; font-style:normal; text-decoration:none; text-transform:none; font-weight:600; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Exo; color:#ffffff; top:310px; left:50%; width:1000px; font-size:40px;"--}}
-{{--                       class="ls-l ls-hide-desktop ls-hide-phone ls-text-layer"--}}
-{{--                       data-ls="offsetxin:300; durationin:1500; delayin:400; easingin:easeOutQuint; offsetxout:300; durationout:1500; easingout:easeOutQuint;">--}}
-{{--                        {{ $slider->name[app()->getLocale().'_name'] }}</p>--}}
+                    {{--                    <p style="text-align:center; font-style:normal; text-decoration:none; text-transform:none; font-weight:600; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Exo; color:#ffffff; top:310px; left:50%; width:1000px; font-size:40px;"--}}
+                    {{--                       class="ls-l ls-hide-desktop ls-hide-phone ls-text-layer"--}}
+                    {{--                       data-ls="offsetxin:300; durationin:1500; delayin:400; easingin:easeOutQuint; offsetxout:300; durationout:1500; easingout:easeOutQuint;">--}}
+                    {{--                        {{ $slider->name[app()->getLocale().'_name'] }}</p>--}}
                     <h1 style="top:404px; left:50%; text-align:center; font-weight:700; background-size:inherit; background-position:inherit; font-size:110px; color:#ffffff; font-family:Exo; width:1200px;"
                         class="ls-l ls-hide-desktop ls-hide-phone ls-text-layer"
                         data-ls="offsetxin:-200; durationin:1500; easingin:easeOutQuint; offsetxout:-100; durationout:1500; easingout:easeOutQuint; position:relative;">
@@ -53,7 +54,8 @@
                         class="ls-l ls-hide-desktop ls-hide-phone ls-html-layer"
                         data-ls="offsetyin:50; durationin:1500; delayin:900; easingin:easeOutQuint; offsetyout:50; durationout:1500; easingout:easeOutQuint; position:relative;">
                         <div class="ls-btn-group justify-content-center"><a href="{{ route('weblabs.service') }}"
-                                                                            class="vs-btn ls-hero-btn">@lang('menu.service')<i
+                                                                            class="vs-btn ls-hero-btn">@lang('menu.service')
+                                <i
                                     class="far fa-arrow-right"></i></a></div>
                     </div>
                     <div
@@ -71,7 +73,8 @@
                         class="ls-l ls-hide-desktop ls-hide-tablet ls-html-layer"
                         data-ls="offsetyin:50; durationin:1500; delayin:900; easingin:easeOutQuint; offsetyout:50; durationout:1500; easingout:easeOutQuint; position:relative;">
                         <div class="ls-btn-group justify-content-center"><a href="{{ route('weblabs.project') }}"
-                                                                            class="vs-btn ls-hero-btn">@lang('menu.project')<i
+                                                                            class="vs-btn ls-hero-btn">@lang('menu.project')
+                                <i
                                     class="far fa-arrow-right"></i></a></div>
                     </div>
                 </div>
@@ -87,7 +90,8 @@
                         <h2 class="sec-title3 h1">@lang('menu.service')</h2></div>
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <div class="sec-btns2"><a href="{{ route('weblabs.service') }}" class="vs-btn">@lang('menu.service')<i
+                    <div class="sec-btns2"><a href="{{ route('weblabs.service') }}" class="vs-btn">@lang('menu.service')
+                            <i
                                 class="far fa-arrow-right"></i></a></div>
                 </div>
             </div>
@@ -97,25 +101,19 @@
                     <div class="col-xl-3">
                         <div class="service-style3">
                             <div class="service-front">
-                                <div class="service-img"><img src="{{ asset('weblabs/assets/img/bg/ab-bg-1-1.jpg') }}" alt="image" class="w-100">
+                                <div class="service-img"><img src="{{ asset('weblabs/assets/img/bg/ab-bg-1-1.jpg') }}"
+                                                              alt="image" class="w-100">
                                 </div>
                                 <div class="service-content">
-                                    <div class="service-icon"><img
-                                            src="{{ $service->bg_image }}" alt="icon">
-                                    </div>
-                                    <h3 class="service-title h6"><a class="text-inherit"
-                                                                    href="{{ route('weblabs.service_details',$service->id) }}">{{ $service->name[app()->getLocale().'_name'] }}</a>
-                                    </h3>
-                                    <p class="service-text">{{ $service->name[app()->getLocale().'_name'] }}</p>
-                                    <a
-                                        href="{{ route('weblabs.service_details',$service->id) }}" class="link-btn">Read
-                                        Details<i
-                                            class="far fa-arrow-right"></i></a></div>
+                                    <div class="service-icon"><img src="{{ $service->bg_image }}" alt="icon"></div>
+                                    <h3 class="service-title h6"><a
+                                            href="{{ route('weblabs.service_details',$service->id) }}">{{ $service->name[app()->getLocale().'_name'] }}</a>
+                                    </h3></div>
                             </div>
                             <div class="service-back">
                                 <div class="service-content">
                                     <div class="service-icon"><img
-                                            src="{{ $service->bg_image }}" alt="icon">
+                                            src="{{ asset('weblabs/assets/img/icon/sr-icon-3-1.png') }}" alt="icon">
                                     </div>
                                     <h3 class="service-title h6"><a class="text-inherit"
                                                                     href="{{ route('weblabs.service_details',$service->id) }}">{{ $service->name[app()->getLocale().'_name'] }}</a>
@@ -142,7 +140,8 @@
                         <div class="counter-media">
                             <div class="counter-media__icon"><img src="/weblabs/assets/img/icon/count-1-2.png"
                                                                   alt="icon"></div>
-                            <div class="media-body"><span class="counter-media__number h1 text-white">{{ $projects->count() }}</span>
+                            <div class="media-body"><span
+                                    class="counter-media__number h1 text-white">{{ $projects->count() }}</span>
                                 <p class="counter-media__title text-white">@lang('menu.project')</p></div>
                         </div>
                     </div>
@@ -186,7 +185,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid overflow-hidden px-xxl-0">
+        <div class="container-fluid  overflow-hidden px-xxl-0">
             <div class="row vs-carousel" data-slide-show="4" data-ml-slide-show="3" data-lg-slide-show="3"
                  data-md-slide-show="2" id="projectslide1">
                 @foreach($projects as $project)

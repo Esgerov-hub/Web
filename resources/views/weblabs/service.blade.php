@@ -6,7 +6,7 @@
 
 @endsection
 @section('weblabs.content')
-    <div class="breadcumb-wrapper" data-bg-src="{{ asset('weblabs/assets/img/breadcumb/breadcumb-bg.jpg') }}">
+    <div class="breadcumb-wrapper" data-bg-src="{{ asset('weblabs/assets/img/weblabs.jpeg') }}">
         <div class="container z-index-common">
             <div class="breadcumb-content"><h1 class="breadcumb-title">@lang('menu.service')</h1>
                 <div class="breadcumb-menu-wrap">

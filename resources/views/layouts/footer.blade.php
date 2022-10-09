@@ -45,7 +45,7 @@
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-md-6 col-lg-4 col-xl-auto">
-                    <div class="widget footer-widget"><h3 class="widget_title">@lang('menu.contact')</h3>
+                    <div class="widget footer-widget"><h3 class="widget_title">@lang('menu.about')</h3>
                         <div class="vs-widget-about">
                             <p class="footer-text">{{ $abouts->name[app()->getLocale().'_name'] }}</p>
                             <div class="footer-social">
@@ -74,7 +74,7 @@
     </div>
     <div class="copyright-wrap">
         <div class="container"><p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2022 <a
-                    class="text-white" href="{{ route('weblabs.index') }}">WebLabs</a>. All rights reserved by
+                    class="text-white" href="{{ route('weblabs.index') }}">WebLabs</a>. All rights reserved
             </p></div>
     </div>
 </footer>

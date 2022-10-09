@@ -25,8 +25,9 @@ return
     'address' => 'Ünvanımız',
     'sosial_contact' => 'Mobil nömrə & E-poçt',
     'work_time' => 'İş vaxtımız',
-    'work_date'  => '9:00 - 18:00 ( Bazar ertəsi - Cümə ) Şənbə, Bazar və Bayram
-                                             Bağlı',
-    'follow' => 'Bizi izləyin'
+    'work_date'  => '9:00 - 18:00 ( Bazar ertəsi - Cümə )',
+    'follow' => 'Bizi izləyin',
+    'mon' => 'Bazar ertəsi',
+    'fri' => 'Cümə'
 
 ];

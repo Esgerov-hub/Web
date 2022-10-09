@@ -27,5 +27,7 @@ return
     'work_time' => 'Official Work Time',
     'work_date'  => '9:00am - 6:00pm ( Mon - Fri ) Sat, Sun & Holiday
                                             Closed',
-    'follow' => 'Follow Us On'
+    'follow' => 'Follow Us On',
+    'mon' => 'Mon',
+    'fri' => 'Fri'
 ];
